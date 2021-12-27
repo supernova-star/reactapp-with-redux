@@ -1,0 +1,46 @@
+.addtocartContainer {
+  .cardheaderLight {
+    width: 8em;
+    color: black;
+  }
+  .cardheaderDark {
+    width: 8em;
+  }
+  .products {
+    height: 40em;
+    .cartproductDark {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      width: 19em;
+      background-color: #13504d;
+      color: whitesmoke;
+    }
+    .cartproductLight {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      width: 19em;
+      background-color: #3f7990;
+      color: whitesmoke;
+      .removeLight {
+        background-color: #1c607a;
+      }
+    }
+    .emptyCart {
+      width: 9.5em;
+      font-size: 2em;
+      background-color: whitesmoke;
+    }
+  }
+  .remove {
+    cursor: pointer;
+  }
+
+  .totalPriceLight {
+    font-size: 2em;
+    color: black;
+    width: 8em;
+  }
+  .totalPriceDark {
+    font-size: 2em;
+    width: 8em;
+    // color: whitesmoke;
+  }
+}

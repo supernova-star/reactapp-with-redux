@@ -1,0 +1,41 @@
+.navigationDark {
+  background-color: #081627;
+  color: white;
+}
+
+.navigationLight {
+  background-color: #fff;
+  color: black;
+  border-right: 1px solid #d4d4d4;
+}
+.contentDark {
+  background-color: #081e35;
+}
+
+.contentLight {
+  background-color: #fff;
+}
+.cartView {
+  right: 0em;
+  .btn-cart {
+    height: 3em;
+    background-color: #bbe4e9;
+    border-radius: 0%;
+  }
+  .addtocartDark {
+    background-color: white;
+    width: 20em;
+    transition: width 0.5s;
+  }
+
+  .addtocartLight {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    width: 20em;
+    transition: width 0.5s;
+  }
+
+  .closeCart {
+    width: 0em;
+  }
+}

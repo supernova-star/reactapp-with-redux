@@ -1,0 +1,55 @@
+.listGroup {
+  height: 53em;
+  .overviewDark {
+    color: ghostwhite;
+    font-weight: 200;
+  }
+  .overviewLight {
+    color: black;
+    font-weight: 200;
+  }
+  .listItemDark {
+    outline: none;
+    border: 2px solid transparent;
+    svg {
+      fill: whitesmoke;
+    }
+    span {
+      color: ghostwhite;
+      outline-color: transparent;
+      outline: none;
+      &:focus {
+        outline-color: transparent;
+        outline: none;
+      }
+    }
+  }
+  .listItemLight {
+    border-radius: 15px;
+    border: 2px solid transparent;
+    svg {
+      fill: black;
+    }
+    span {
+      color: black;
+      outline-color: transparent;
+      outline: none;
+      &:focus {
+        outline-color: transparent;
+        outline: none;
+      }
+    }
+  }
+  .activeDark {
+    background-color: #0a66403d;
+    border: 2px solid #0a6640;
+    border-radius: 15px;
+  }
+  .activeLight {
+    span {
+      color: #1c1a1aed;
+    }
+    background-color: #bbe4e9;
+    border-radius: 15px;
+  }
+}
