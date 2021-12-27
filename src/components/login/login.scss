@@ -1,0 +1,32 @@
+.loginContainer {
+  width: 55em;
+  height: 35em;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  .loginContent {
+    .welcome {
+      color: hsl(236, 32%, 42%);
+    }
+    .inputWrapper {
+      background-color: whitesmoke;
+      border-radius: 20px;
+      .newloginInput {
+        .emailIcon {
+          width: 1.5em;
+          height: 1.5em;
+        }
+      }
+    }
+    .loginButtons {
+      background-color: #342e94c7;
+      border: 0px;
+      &:focus,
+      &:active:focus,
+      & .active:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

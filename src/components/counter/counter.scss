@@ -1,0 +1,38 @@
+.buttonStyleDark {
+  width: 20em;
+  height: 20em;
+  background: #81fcca;
+  border-radius: 10px;
+  .counterStyle {
+    color: #045604;
+    font-size: 4em;
+  }
+  .buttonValue {
+    width: 3em;
+    height: 3em;
+    font-size: 2em;
+    padding-top: 0.2em;
+    border-radius: 50%;
+    background: linear-gradient(to right, #11998e75, #38ef7d);
+  }
+}
+.buttonStyleLight {
+  width: 20em;
+  height: 20em;
+  background: #bbe4e9;
+  border-radius: 10px;
+  .counterStyle {
+    color: #00204a;
+    font-size: 4em;
+  }
+  .buttonValue {
+    width: 3em;
+    height: 3em;
+    font-size: 2em;
+    padding-top: 0.2em;
+    border-style: hidden;
+    border-radius: 50%;
+    color: whitesmoke;
+    background: #24527a;
+  }
+}

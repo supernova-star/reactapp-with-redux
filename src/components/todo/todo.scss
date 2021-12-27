@@ -1,0 +1,104 @@
+.todoContainer {
+  .todoInputDark {
+    .inputstyles {
+      background-color: #1d3348;
+      border: 0;
+      outline: none;
+      color: whitesmoke;
+      font-size: 2em;
+    }
+    button {
+      font-size: 1.5em;
+      background-color: #13504d;
+      color: whitesmoke;
+    }
+  }
+  .todoInputLight {
+    .inputstyles {
+      background-color: #e9e9e9;
+      border: 0;
+      outline: none;
+      color: black;
+      font-size: 2em;
+    }
+    button {
+      font-size: 1.5em;
+      background-color: #53a8b6;
+      color: black;
+    }
+  }
+  .todoContentDark {
+    color: white;
+    .searchBar {
+      width: 75%;
+      background-color: #1d3348;
+      border: 0;
+      outline: none;
+      color: whitesmoke;
+      font-size: 2em;
+    }
+    .list {
+      height: 50em;
+      .todo {
+        background: linear-gradient(to right, #aaffa9, #11ffbd);
+        width: 75%;
+        height: 3em;
+        color: black;
+        border-radius: 10px;
+        font-size: 1.5em;
+        button {
+          font-size: 1em;
+        }
+      }
+    }
+    .noResult {
+      background-color: #1e3144;
+      width: 75%;
+      border-radius: 10px;
+      color: whitesmoke;
+    }
+  }
+
+  .todoContentLight {
+    .searchBar {
+      width: 75%;
+      background-color: #e9e9e9;
+      border: 0;
+      outline: none;
+      color: black;
+      font-size: 2em;
+    }
+    .list {
+      height: 50em;
+      .todo {
+        background: #366b76;
+        width: 75%;
+        height: 3em;
+        color: whitesmoke;
+        border-radius: 10px;
+        font-size: 1.5em;
+        button {
+          font-size: 1em;
+          svg {
+            fill: whitesmoke;
+          }
+        }
+      }
+    }
+    .noResult {
+      background-color: #1e314421;
+      width: 75%;
+      border-radius: 10px;
+      color: #504b4b;
+    }
+  }
+}
+
+.btn {
+  &:focus,
+  &:active:focus,
+  & .active:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

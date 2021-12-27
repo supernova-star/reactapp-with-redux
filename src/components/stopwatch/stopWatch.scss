@@ -1,0 +1,37 @@
+.stopWatchLight {
+  background-color: #bbe4e9;
+  border-radius: 10px;
+  width: 25em;
+  height: 20em;
+  color: #00204a;
+}
+
+.stopWatchDark {
+  background-color: #80fcc9;
+  border-radius: 10px;
+  width: 25em;
+  height: 20em;
+  color: #015804;
+}
+.stopWatchIcon {
+  color: black;
+  width: 2.5em;
+  height: 2.5em;
+}
+.timer {
+  font-size: 4em;
+  font-weight: 500;
+  .digits {
+    width: 1.5em;
+  }
+}
+
+.Control-Buttons {
+  div {
+    svg {
+      width: 3em;
+      height: 3em;
+      color: #24527a;
+    }
+  }
+}
