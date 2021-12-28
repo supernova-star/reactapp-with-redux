@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navigation from "../navigation";
 import Products from "../products";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProductDetail from "../productDetail";
 import Todo from "../todo";
 import Dashboard from "../dashboard";
@@ -10,8 +10,10 @@ import { GetTheme } from "../../selectors/navigation";
 import { GetAllProducts } from "../../selectors/product";
 import { FaShoppingCart } from "react-icons/fa";
 import "./home.scss";
+import { SetUserInfo } from "../../actions/loginAction";
 
 const Home = () => {
+  const dispatch = useDispatch();
   const switchValue = useSelector(GetTheme);
   const [isOpen, setisOpen] = useState(false);
   const [dashboardView, setdashboardView] = useState("dashboard");
@@ -23,6 +25,15 @@ const Home = () => {
   const handleNavigation = (value) => {
     setdashboardView(value);
   };
+
+  const entries = performance.getEntriesByType("navigation");
+  if (
+    entries.map((nav) => nav.type)[0] === "reload" &&
+    window.location.pathname === "/home"
+  ) {
+    const user = window.sessionStorage.getItem("user");
+    dispatch(SetUserInfo(JSON.parse(user)));
+  }
 
   return (
     <div>
