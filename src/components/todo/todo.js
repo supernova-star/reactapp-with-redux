@@ -3,7 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import "./todo.scss";
 import { FaTrash } from "react-icons/fa";
 import { GetTodoList } from "../../selectors/todo";
-import { AddNewTask, RemoveTask } from "../../actions/todoAction";
+import {
+  AddNewTask,
+  FetchTodoList,
+  RemoveTask,
+} from "../../actions/todoAction";
 import { GetTheme } from "../../selectors/navigation";
 
 const Todo = () => {
@@ -14,6 +18,12 @@ const Todo = () => {
   const [searchValue, setSearchValue] = useState("");
   const [list, setList] = useState(todoList);
   const [noResultFound, setNoResultFound] = useState(false);
+
+  useEffect(() => {
+    if (todoList.length === 0) {
+      dispatch(FetchTodoList());
+    }
+  }, []);
   const handleInputChange = (e) => {
     setinputValue(e.target.value);
   };
@@ -23,11 +33,11 @@ const Todo = () => {
       setinputValue("");
     }
   };
-  const handleRemoveTask = (todo) => {
-    const index = todoList.findIndex((item) => item === todo);
+  const handleRemoveTask = (todoId) => {
+    const index = todoList.findIndex((item) => item.id === todoId);
     dispatch(RemoveTask(index));
     if (searchValue !== "") {
-      const newList = list.filter((item) => item !== todo);
+      const newList = list.filter((item) => item.id !== todoId);
       setList(newList);
       if (newList.length === 0) {
         setNoResultFound(true);
@@ -38,7 +48,9 @@ const Todo = () => {
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
     setSearchValue(searchTerm);
-    const newList = todoList.filter((item) => item.includes(e.target.value));
+    const newList = todoList.filter((item) =>
+      item.title.includes(e.target.value)
+    );
     setList(newList);
     if (newList.length === 0) {
       setNoResultFound(true);
@@ -98,8 +110,11 @@ const Todo = () => {
                 key={index}
                 className="todo p-3 d-flex flex-row justify-content-between align-items-center m-2"
               >
-                <span>{item}</span>
-                <button onClick={() => handleRemoveTask(item)} className="btn">
+                <span>{item.title}</span>
+                <button
+                  onClick={() => handleRemoveTask(item.id)}
+                  className="btn"
+                >
                   <FaTrash />
                 </button>
               </div>

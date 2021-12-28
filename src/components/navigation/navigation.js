@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./navigation.scss";
 import PropTypes from "prop-types";
 import List from "@material-ui/core/List";
@@ -7,21 +7,54 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@material-ui/core/ListItemText";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineProject } from "react-icons/ai";
+import { FaPowerOff } from "react-icons/fa";
 import { BiTimer } from "react-icons/bi";
 import { MdPlaylistAddCheck, MdGridView } from "react-icons/md";
 import Switch from "../shared/switch";
+import { useNavigate } from "react-router-dom";
+import { IconButton } from "@material-ui/core";
 import { GetTheme } from "../../selectors/navigation";
 import { SetMode } from "../../actions/navigationAction";
+import { SetUserInfo } from "../../actions/loginAction";
+import { SetCounter } from "../../actions/counterAction";
+import {
+  SetCartDetails,
+  SetProductCategories,
+  SetProducts,
+} from "../../actions/productAction";
+import { SetTodoList } from "../../actions/todoAction";
 
 const Navigation = ({ dashboardView, handleNavigation }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const switchValue = useSelector(GetTheme);
   const handleMode = () => {
     dispatch(SetMode(!switchValue));
   };
+  const handleLogout = () => {
+    navigate("/");
+    dispatch(SetUserInfo({}));
+    dispatch(SetCounter(0));
+    dispatch(SetProducts([]));
+    dispatch(SetProductCategories([]));
+    dispatch(SetCartDetails([]));
+    dispatch(SetTodoList([]));
+  };
   return (
     <div className="p-3 text-center listGroup">
-      <h3>NEW PROJECT</h3>
+      <div className="d-flex flex-row justify-content-between">
+        <h3 className="m-0">UTILITY APP</h3>
+        <IconButton
+          color="primary"
+          aria-label="upload picture"
+          onClick={handleLogout}
+          component="span"
+          className={`px-2 py-1 ${switchValue ? "text-white" : "text-dark"}`}
+        >
+          <FaPowerOff />
+        </IconButton>
+      </div>
+
       <hr />
       <div className="d-flex align-items-baseline justify-content-center">
         <AiOutlineProject />
