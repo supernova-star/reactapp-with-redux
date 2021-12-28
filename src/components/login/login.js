@@ -45,7 +45,7 @@ const Login = () => {
     if (currentUser.length !== 0) {
       navigate("./home");
       dispatch(SetUserInfo(currentUser[0]));
-      // window.sessionStorage.setItem("user", JSON.stringify(currentUser[0]));
+      window.sessionStorage.setItem("user", JSON.stringify(currentUser[0]));
     }
   };
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./toast.scss";
+// import "./toast.scss";
 import { useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import { ToastContainer, toast, Bounce } from "react-toastify";
