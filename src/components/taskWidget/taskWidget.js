@@ -1,10 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./taskWidget.scss";
 import { useSelector } from "react-redux";
 import { GetTheme } from "../../selectors/navigation";
 import { GetTodoList } from "../../selectors/todo";
 import { FaCheck } from "react-icons/fa";
-import Toast from "../shared/toast";
 
 const TaskWidget = () => {
   const theme = useSelector(GetTheme);
@@ -21,9 +20,12 @@ const TaskWidget = () => {
         {todoList.map((item) => (
           <div className="d-flex flex-row align-items-baseline p-1">
             <FaCheck />
-            <span className="ms-2 fs-5">{item}</span>
+            <span className="ms-2 fs-5">{item.title}</span>
           </div>
         ))}
+        {todoList.length === 0 && (
+          <div className="py-2 px-3 display-6">No Tasks created!</div>
+        )}
       </div>
     </div>
   );
