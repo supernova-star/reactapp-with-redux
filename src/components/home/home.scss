@@ -1,19 +1,40 @@
+.homeContainerLight {
+  background-color: #eceff1;
+  height: 100%;
+}
+.homeContainerDark {
+  background-color: rgb(26, 32, 53);
+  height: 100%;
+}
 .navigationDark {
-  background-color: #081627;
+  background-color: rgb(31, 40, 62);
   color: white;
+  border-radius: 12px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
+    rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
 }
 
 .navigationLight {
   background-color: #fff;
   color: black;
-  border-right: 1px solid #d4d4d4;
+  border-radius: 12px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
+    rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
 }
 .contentDark {
-  background-color: #081e35;
+  // background-color: rgb(52, 71, 103);
+  // box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
+  //   rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+  // border-radius: 12px;
+  width: 80%;
 }
 
 .contentLight {
-  background-color: #fff;
+  // box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
+  //   rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+  // border-radius: 12px;
+  // background-color: #fff;
+  width: 80%;
 }
 .cartView {
   right: 0em;
@@ -25,6 +46,7 @@
   .addtocartDark {
     background-color: white;
     width: 20em;
+    height: 50em;
     transition: width 0.5s;
   }
 
@@ -32,6 +54,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
     width: 20em;
+    height: 50em;
     transition: width 0.5s;
   }
 

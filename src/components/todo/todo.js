@@ -65,13 +65,17 @@ const Todo = () => {
   }, [todoList, searchValue]);
 
   return (
-    <div className="todoContainer rounded p-3">
-      <h3 className={`mb-3 p-2 ${theme ? "text-white" : "text-dark"}`}>
+    <div
+      className={`rounded pt-0 pb-3 px-3 ${
+        theme ? "todoContainerDark" : "todoContainerLight"
+      }`}
+    >
+      <h3 className={`mb-3 py-3 px-3 ${theme ? "text-white" : "text-dark"}`}>
         Task List!
       </h3>
-      <div className="d-flex flex-row">
+      <div className="d-flex flex-row mt-3">
         <div
-          className={`mx-3 col-sm-4 ${
+          className={`me-3 p-3 col-sm-4 ${
             theme ? "todoInputDark" : "todoInputLight"
           }`}
         >
@@ -79,7 +83,7 @@ const Todo = () => {
             type="text"
             value={inputValue}
             onChange={handleInputChange}
-            class="inputstyles form-control py-2 px-4"
+            class="inputstyles fs-4 form-control py-2 px-4"
             placeholder="Enter new task"
           />
           <button onClick={handleAddTask} className="btn w-100 my-3">
@@ -88,7 +92,7 @@ const Todo = () => {
         </div>
 
         <div
-          className={`col-sm-8 ${
+          className={`col-sm-8 ms-3 p-3 ${
             theme ? "todoContentDark" : "todoContentLight"
           }`}
         >
@@ -96,7 +100,7 @@ const Todo = () => {
             type="text"
             value={searchValue}
             onChange={handleSearch}
-            class="searchBar mx-2 mb-2 form-control py-2 px-4"
+            class="searchBar fs-4 mb-2 form-control py-2 px-4"
             placeholder={
               todoList.length === 0
                 ? "Please add tasks to search"
@@ -108,7 +112,7 @@ const Todo = () => {
             {list.map((item, index) => (
               <div
                 key={index}
-                className="todo p-3 d-flex flex-row justify-content-between align-items-center m-2"
+                className="todo p-3 d-flex flex-row justify-content-between align-items-center fs-6 my-2"
               >
                 <span>{item.title}</span>
                 <button

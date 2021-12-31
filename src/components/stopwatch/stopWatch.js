@@ -9,6 +9,7 @@ import {
   MdOutlineRestartAlt,
 } from "react-icons/md";
 import { FaPlay } from "react-icons/fa";
+import { IconButton } from "@material-ui/core";
 
 const StopWatch = () => {
   const [isActive, setIsActive] = useState(false);
@@ -45,18 +46,38 @@ const StopWatch = () => {
   };
 
   const StartButton = (
-    <div className="btn " onClick={handleStart}>
-      <FaPlay />
-    </div>
+    <IconButton
+      color="primary"
+      aria-label="upload picture"
+      onClick={handleStart}
+      component="span"
+    >
+      <FaPlay size={40} color="#24527a" />
+    </IconButton>
   );
   const ActiveButtons = (
     <div>
-      <div className="btn" onClick={handleReset}>
-        <MdOutlineRestartAlt />
-      </div>
-      <div className="btn btn-one" onClick={handlePauseResume}>
-        {isPaused ? <MdNotStarted /> : <MdPauseCircle />}
-      </div>
+      <IconButton
+        color="primary"
+        aria-label="upload picture"
+        onClick={handleReset}
+        component="span"
+      >
+        <MdOutlineRestartAlt size={50} color="#24527a" />
+      </IconButton>
+      <IconButton
+        color="primary"
+        aria-label="upload picture"
+        onClick={handlePauseResume}
+        component="span"
+      >
+        {isPaused ? (
+          <MdNotStarted size={50} color="#24527a" />
+        ) : (
+          <MdPauseCircle size={50} color="#24527a" />
+        )}
+      </IconButton>
+      <div className="btn" onClick={handlePauseResume}></div>
     </div>
   );
   return (

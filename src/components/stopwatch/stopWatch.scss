@@ -1,5 +1,7 @@
 .stopWatchLight {
   background-color: #bbe4e9;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   border-radius: 10px;
   width: 25em;
   height: 20em;
@@ -23,15 +25,5 @@
   font-weight: 500;
   .digits {
     width: 1.5em;
-  }
-}
-
-.Control-Buttons {
-  div {
-    svg {
-      width: 3em;
-      height: 3em;
-      color: #24527a;
-    }
   }
 }

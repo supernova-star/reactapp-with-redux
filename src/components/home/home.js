@@ -11,6 +11,7 @@ import { GetAllProducts } from "../../selectors/product";
 import { FaShoppingCart } from "react-icons/fa";
 import "./home.scss";
 import { SetUserInfo } from "../../actions/loginAction";
+import Book from "../book";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -37,9 +38,13 @@ const Home = () => {
 
   return (
     <div>
-      <div className="d-flex flex-row">
+      <div
+        className={`d-flex flex-row ${
+          switchValue ? "homeContainerDark" : "homeContainerLight"
+        }`}
+      >
         <div
-          className={`col-sm-2 ${
+          className={`col-sm-2 mb-5 mt-3 ms-2 me-2 ${
             switchValue ? "navigationDark" : "navigationLight"
           }`}
         >
@@ -49,7 +54,7 @@ const Home = () => {
           />
         </div>
         <div
-          className={`col-sm-10 ${
+          className={`col-sm-10 mt-3 mb-5 ms-2  ${
             switchValue ? "contentDark" : "contentLight"
           }`}
         >
@@ -61,9 +66,10 @@ const Home = () => {
           {dashboardView === "productDetail" && (
             <ProductDetail handleNavigation={handleNavigation} />
           )}
+          {dashboardView === "bookList" && <Book />}
         </div>
         <div
-          className={`d-flex flex-row position-absolute overflow-hidden cartView `}
+          className={`d-flex flex-row position-absolute mt-3 mb-5 overflow-hidden cartView `}
         >
           <button className="btn btn-cart" onClick={handleAddtoCart}>
             <FaShoppingCart />

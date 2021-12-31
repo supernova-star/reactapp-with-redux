@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { GetTheme } from "../../selectors/navigation";
 import { GetTodoList } from "../../selectors/todo";
 import { FaCheck } from "react-icons/fa";
+import { MdViewList } from "react-icons/md";
 
 const TaskWidget = () => {
   const theme = useSelector(GetTheme);
@@ -13,13 +14,14 @@ const TaskWidget = () => {
     <div
       className={`${theme ? "taskWidgetDark" : "taskWidgetLight"} my-3 mx-4`}
     >
-      <div className="listHeader p-2 text-center">
-        <h5 className="fs-2 ">Task List!</h5>
+      <div className="listHeader p-2 text-center d-flex flex-row">
+        <MdViewList size={30} className="me-5 mt-2" color="black" />
+        <h5 className="fs-2 ms-5">Task List!</h5>
       </div>
       <div className="p-3 taskContainer overflow-auto">
         {todoList.map((item) => (
           <div className="d-flex flex-row align-items-baseline p-1">
-            <FaCheck />
+            <FaCheck className="col-sm-1" size={20} />
             <span className="ms-2 fs-5">{item.title}</span>
           </div>
         ))}
