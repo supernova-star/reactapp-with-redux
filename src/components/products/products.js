@@ -71,13 +71,13 @@ const Products = ({ handleNavigation }) => {
 
   return (
     <div
-      className={`rounded p-3 ${
+      className={`pt-0 pb-3 px-3 ${
         mode ? "productcontainerDark" : "productcontainerLight"
       }`}
     >
-      <h4 className={`mb-3 ${mode ? "text-white" : "text-dark"}`}>
+      <h3 className={`mb-3 py-3 px-3 ${mode ? "text-white" : "text-dark"}`}>
         Products List
-      </h4>
+      </h3>
       <div>
         <span>
           <strong>
@@ -96,26 +96,6 @@ const Products = ({ handleNavigation }) => {
             </Button>
           ))}
         </ButtonGroup>
-        {/* <div class="btn-group" role="group" aria-label="Basic example">
-          <button
-            type="button"
-            class="btn text-capitalize"
-            onClick={handleproductsByCategory}
-            value="getAllProducts"
-          >
-            Get All Products
-          </button>
-          {productcategories.map((category) => (
-            <button
-              type="button"
-              class="btn text-capitalize"
-              onClick={handleproductsByCategory}
-              c
-            >
-              {category}
-            </button>
-          ))}
-        </div> */}
       </div>
       {loading && (
         <div className="d-flex flex-row justify-content-center align-items-center py-5">
@@ -126,7 +106,7 @@ const Products = ({ handleNavigation }) => {
         <div className="d-flex flex-row flex-wrap overflow-auto mt-2 productContent">
           {newproducts.map((item) => (
             <div
-              className="product p-2 rounded my-2 mx-4"
+              className="product p-2 rounded my-2 mx-3"
               onClick={() => getProductDetails(item.id)}
             >
               <div className="d-flex flex-row">

@@ -1,4 +1,11 @@
 .productcontainerDark {
+  h3 {
+    background-color: rgb(32, 41, 64);
+    box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem,
+      rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem,
+      rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem;
+    border-radius: 12px;
+  }
   .btn-group {
     background-color: #13504d;
     border-radius: 1em;
@@ -34,10 +41,17 @@
 }
 
 .productcontainerLight {
-  background-color: white;
+  // background-color: white;
+  h3 {
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
+      rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
+    border-radius: 12px;
+  }
   .btn-group {
     background-color: #64dcf07a;
     border-radius: 1em;
+
     .btn {
       color: black;
     }
@@ -46,6 +60,7 @@
     max-height: 40em;
     .product {
       cursor: pointer;
+      background-color: white;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       width: 400px;
       .badge {

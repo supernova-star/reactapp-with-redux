@@ -1,5 +1,5 @@
 .listGroup {
-  height: 53em;
+  height: 50em;
   .overviewDark {
     color: ghostwhite;
     font-weight: 200;
@@ -26,7 +26,6 @@
   }
   .listItemLight {
     border-radius: 15px;
-    border: 2px solid transparent;
     svg {
       fill: black;
     }
@@ -49,7 +48,7 @@
     span {
       color: #1c1a1aed;
     }
-    background-color: #bbe4e9;
-    border-radius: 15px;
+    background: linear-gradient(195deg, #bbe4e9, #5fd4e2e8);
+    border-radius: 5px;
   }
 }

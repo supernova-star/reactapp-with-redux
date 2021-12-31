@@ -4,6 +4,8 @@
   width: 27em;
   height: 20em;
   color: #00204a;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   .listHeader {
     background-color: #3469883b;
   }
@@ -21,7 +23,6 @@
 
 .listHeader {
   height: 4em;
-
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   h5 {
@@ -31,8 +32,4 @@
 
 .taskContainer {
   height: 16em;
-  svg {
-    width: 1em;
-    height: 1em;
-  }
 }

@@ -6,6 +6,7 @@ import {
 } from "../../actions/counterAction";
 import { GetCountValue } from "../../selectors/counter";
 import { GetTheme } from "../../selectors/navigation";
+import { MdOutlineAdd, MdHorizontalRule } from "react-icons/md";
 import Button from "@material-ui/core/Button";
 import "./counter.scss";
 
@@ -33,7 +34,7 @@ const Counter = () => {
           onClick={handleIncrement}
           className="buttonValue d-inline-block mx-2"
         >
-          +
+          <MdOutlineAdd />
         </Button>
         <Button
           variant="contained"
@@ -41,7 +42,7 @@ const Counter = () => {
           onClick={handleDecrement}
           className="buttonValue d-inline-block mx-2"
         >
-          -
+          <MdHorizontalRule />
         </Button>
       </div>
     </div>
