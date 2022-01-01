@@ -22,7 +22,7 @@ const Counter = () => {
   };
   return (
     <div
-      className={`p-4 d-flex my-3 flex-column justify-content-between counterContainer ${
+      className={`py-3 d-flex my-3 flex-column justify-content-between counterContainer ${
         theme ? "buttonStyleDark" : "buttonStyleLight"
       }`}
     >
@@ -32,7 +32,7 @@ const Counter = () => {
           variant="contained"
           size="large"
           onClick={handleIncrement}
-          className="buttonValue d-inline-block mx-2"
+          className="buttonValue d-inline-block mx-2 p-0"
         >
           <MdOutlineAdd />
         </Button>
@@ -40,7 +40,7 @@ const Counter = () => {
           variant="contained"
           size="large"
           onClick={handleDecrement}
-          className="buttonValue d-inline-block mx-2"
+          className="buttonValue d-inline-block mx-2 p-0"
         >
           <MdHorizontalRule />
         </Button>

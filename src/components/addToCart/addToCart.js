@@ -15,13 +15,13 @@ const AddToCart = () => {
   };
   return (
     <div className="addtocartContainer">
-      <h4
-        className={`display-6 text-center m-2 ${
+      <p
+        className={`text-center m-auto ${
           theme ? "cardheaderLight" : "cardheaderDark"
         }`}
       >
         Add To Cart
-      </h4>
+      </p>
       <hr />
       <div className="products overflow-auto">
         {cart.map((item) => (
@@ -30,12 +30,14 @@ const AddToCart = () => {
               theme ? "cartproductDark" : "cartproductLight"
             }`}
           >
-            <h6>{item.title}</h6>
+            <p className="title">{item.title}</p>
             <div className="d-flex flex-row justify-content-between">
-              <span>Price : {item.price}$</span>
+              <span className="title">Price : {item.price}$</span>
               <span
                 class={`badge remove ${
-                  theme ? "bg-light text-dark" : " removeLight text-light"
+                  theme
+                    ? "bg-light removeDark text-dark"
+                    : " removeLight text-light"
                 } `}
                 onClick={() => handleRemoveItem(item.id)}
               >
@@ -45,13 +47,11 @@ const AddToCart = () => {
           </div>
         ))}
         {cart.length === 0 && (
-          <div className="emptyCart p-2 m-2 text-center">
-            Your cart is empty!{" "}
-          </div>
+          <div className="emptyCart text-center">Your cart is empty! </div>
         )}
       </div>
       <hr />
-      <div className={`p-3 ${theme ? "totalPriceLight" : "totalPriceDark"}`}>
+      <div className={` ${theme ? "totalPriceLight" : "totalPriceDark"}`}>
         Total: {totalPrice.toFixed(2)}$
       </div>
     </div>

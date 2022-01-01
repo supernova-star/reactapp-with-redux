@@ -1,8 +1,7 @@
 .taskWidgetLight {
   background-color: #bbe4e9;
   border-radius: 10px;
-  width: 27em;
-  height: 20em;
+  width: 27vw;
   color: #00204a;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -13,8 +12,7 @@
 .taskWidgetDark {
   background-color: #80fcc9;
   border-radius: 10px;
-  width: 27em;
-  height: 20em;
+  width: 27vw;
   color: #015804;
   .listHeader {
     background-color: #47e191;
@@ -22,14 +20,22 @@
 }
 
 .listHeader {
-  height: 4em;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   h5 {
     font-weight: 400;
   }
 }
-
+.taskheading {
+  font-size: 2vw;
+}
 .taskContainer {
-  height: 16em;
+  height: 16vw;
+  .notask {
+    font-size: 2.5vw;
+    font-weight: 300;
+  }
+  .todoText {
+    font-size: 1.5vw;
+  }
 }

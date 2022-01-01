@@ -7,8 +7,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@material-ui/core/ListItemText";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineProject } from "react-icons/ai";
-import { FaPowerOff } from "react-icons/fa";
-import { BiTimer } from "react-icons/bi";
 import { MdPlaylistAddCheck, MdGridView, MdDashboard } from "react-icons/md";
 import Switch from "../shared/switch";
 import { useNavigate } from "react-router-dom";
@@ -56,9 +54,6 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
 
   const action = (
     <React.Fragment>
-      {/* <Button color="secondary" size="small" onClick={handleClose}>
-        UNDO
-      </Button> */}
       <IconButton
         size="small"
         aria-label="close"
@@ -70,21 +65,12 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
     </React.Fragment>
   );
   return (
-    <div className="p-3 text-center listGroup">
+    <div className="text-center listGroup">
       <div className="d-flex flex-row justify-content-between">
-        <h3 className="m-0">UTILITY APP</h3>
-        {/* <IconButton
-          color="primary"
-          aria-label="upload picture"
-          onClick={handleLogout}
-          component="span"
-          className={`px-2 py-1 ${switchValue ? "text-white" : "text-dark"}`}
-        >
-          <FaPowerOff />
-        </IconButton> */}
+        <p className="m-0 appheader">UTILITY APP</p>
         <MenuDropdown handleLogout={handleLogout} />
       </div>
-      <div>
+      {/* <div className="snackBar">
         <Button onClick={handleClick}>Open simple snackbar</Button>
         <Snackbar
           open={open}
@@ -94,17 +80,17 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
           message="Note archived"
           action={action}
         />
-      </div>
+      </div> */}
       <hr />
       <div className="d-flex align-items-baseline justify-content-center">
-        <AiOutlineProject />
-        <h5
+        <AiOutlineProject size="1vw" />
+        <p
           className={`mb-0 mx-2 ${
             switchValue ? "overViewDark" : "overViewLight"
           }`}
         >
           Project Overview
-        </h5>
+        </p>
         <Switch
           isOn={switchValue}
           onColor="rgb(40 170 87)"
@@ -128,8 +114,8 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
                 : ""
             } ${switchValue ? "listItemDark" : "listItemLight"}`}
           >
-            <MdDashboard size={25} />
-            <ListItemText primary="Dashboard" className="ms-1" />
+            <MdDashboard size="1.5vw" />
+            <ListItemText primary="Dashboard" className="ms-1 text-break" />
           </ListItemButton>
         </ListItem>
         <ListItem
@@ -148,7 +134,7 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
                 : ""
             } ${switchValue ? "listItemDark" : "listItemLight"}`}
           >
-            <MdGridView size={25} />
+            <MdGridView size="1.5vw" />
             <ListItemText primary="Product List" className="ms-1" />
           </ListItemButton>
         </ListItem>
@@ -167,7 +153,7 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
                 : ""
             } ${switchValue ? "listItemDark" : "listItemLight"}`}
           >
-            <MdPlaylistAddCheck size={25} />
+            <MdPlaylistAddCheck size="1.5vw" />
             <ListItemText primary="Todo List" className="ms-1" />
           </ListItemButton>
         </ListItem>
@@ -186,7 +172,7 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
                 : ""
             } ${switchValue ? "listItemDark" : "listItemLight"}`}
           >
-            <MdPlaylistAddCheck size={25} />
+            <MdPlaylistAddCheck size="1.5vw" />
             <ListItemText primary="Book List" className="ms-1" />
           </ListItemButton>
         </ListItem>
