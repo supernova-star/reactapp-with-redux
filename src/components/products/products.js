@@ -22,9 +22,7 @@ const Products = ({ handleNavigation }) => {
   const dispatch = useDispatch();
   const mode = useSelector(GetTheme);
   const products = useSelector(GetAllProducts);
-  // const toastDetails = useSelector((state) => state.navigation.toastDetails);
   const { newproducts, productcategories, loading, cart } = products;
-  // const handleToast = useRef(null);
   useEffect(() => {
     if (newproducts.length === 0) {
       dispatch(fetchProducts());
@@ -75,9 +73,9 @@ const Products = ({ handleNavigation }) => {
         mode ? "productcontainerDark" : "productcontainerLight"
       }`}
     >
-      <h3 className={`mb-3 py-3 px-3 ${mode ? "text-white" : "text-dark"}`}>
+      <p className={`mb-3 py-3 px-3 ${mode ? "text-white" : "text-dark"}`}>
         Products List
-      </h3>
+      </p>
       <div>
         <span>
           <strong>
@@ -86,7 +84,11 @@ const Products = ({ handleNavigation }) => {
             </h5>
           </strong>
         </span>
-        <ButtonGroup variant="outlined" aria-label=" outlined button group">
+        <ButtonGroup
+          className="btngrp"
+          variant="outlined"
+          aria-label=" outlined button group"
+        >
           <Button onClick={handleproductsByCategory} value="getAllProducts">
             Get All Products
           </Button>
@@ -106,7 +108,7 @@ const Products = ({ handleNavigation }) => {
         <div className="d-flex flex-row flex-wrap overflow-auto mt-2 productContent">
           {newproducts.map((item) => (
             <div
-              className="product p-2 rounded my-2 mx-3"
+              className="product p-2 rounded "
               onClick={() => getProductDetails(item.id)}
             >
               <div className="d-flex flex-row">
@@ -114,29 +116,31 @@ const Products = ({ handleNavigation }) => {
                   <img
                     src={item.image}
                     alt={item.id}
-                    width="125"
-                    height="130"
+                    width="90vw"
+                    height="100vw"
                   />
                 </div>
 
-                <div className="d-flex flex-column py-2 ms-5 w-100 justify-content-between prodDetails">
+                <div className="d-flex flex-column py-2 ms-3 w-100 justify-content-between prodDetails">
                   <span>{item.title}</span>
                   <div className="d-flex flex-row justify-content-between">
-                    <span class="badge w-50 me-2 fs-6">{item.price} $</span>
+                    <span class="badge w-50 me-2 priceSize">
+                      {item.price} $
+                    </span>
                     {isInCart(item.id) && (
                       <span
-                        class="badge bg-danger fs-6"
+                        class="badge bg-danger"
                         onClick={(event) => handleRemove(event, item.id)}
                       >
-                        <MdDelete />
+                        <MdDelete size="1vw" />
                       </span>
                     )}
                     {!isInCart(item.id) && (
                       <span
-                        class="badge fs-6"
+                        class="badge"
                         onClick={(event) => handleAddToCart(event, item.id)}
                       >
-                        <FaShoppingCart />
+                        <FaShoppingCart size="1vw" />
                       </span>
                     )}
                   </div>

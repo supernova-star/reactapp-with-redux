@@ -52,7 +52,7 @@ const StopWatch = () => {
       onClick={handleStart}
       component="span"
     >
-      <FaPlay size={40} color="#24527a" />
+      <FaPlay size="3vw" color="#24527a" />
     </IconButton>
   );
   const ActiveButtons = (
@@ -63,7 +63,7 @@ const StopWatch = () => {
         onClick={handleReset}
         component="span"
       >
-        <MdOutlineRestartAlt size={50} color="#24527a" />
+        <MdOutlineRestartAlt size="3vw" color="#24527a" />
       </IconButton>
       <IconButton
         color="primary"
@@ -72,18 +72,18 @@ const StopWatch = () => {
         component="span"
       >
         {isPaused ? (
-          <MdNotStarted size={50} color="#24527a" />
+          <MdNotStarted size="3vw" color="#24527a" />
         ) : (
-          <MdPauseCircle size={50} color="#24527a" />
+          <MdPauseCircle size="3vw" color="#24527a" />
         )}
       </IconButton>
       <div className="btn" onClick={handlePauseResume}></div>
     </div>
   );
   return (
-    <div className={`${theme ? "stopWatchDark" : "stopWatchLight"} p-4`}>
+    <div className={`${theme ? "stopWatchDark" : "stopWatchLight"}`}>
       <RiTimerFill className="stopWatchIcon" />
-      <div className="timer text-center p-4">
+      <div className="timer text-center">
         <span className="digits d-inline-block">
           {("0" + Math.floor((time / 60000) % 60)).slice(-2)}:
         </span>

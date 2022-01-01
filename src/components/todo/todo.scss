@@ -1,5 +1,5 @@
 .todoContainerDark {
-  h3 {
+  p {
     background-color: rgb(32, 41, 64);
     box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem,
       rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem,
@@ -8,7 +8,7 @@
   }
 }
 .todoContainerLight {
-  h3 {
+  p {
     background-color: white;
     box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
       rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
@@ -21,15 +21,15 @@
   box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem,
     rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem,
     rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem;
-  height: 10em;
   .inputstyles {
     background-color: #1d3348;
     border: 0;
     outline: none;
+    font-size: 2vw;
     color: whitesmoke;
   }
   button {
-    font-size: 1.5em;
+    font-size: 1.5vw;
     background-color: #13504d;
     color: whitesmoke;
   }
@@ -39,16 +39,15 @@
   box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
     rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
   border-radius: 12px;
-  height: 10em;
   .inputstyles {
     background-color: #e9e9e9;
     border: 0;
     outline: none;
     color: black;
-    font-size: 2em;
+    font-size: 2vw;
   }
   button {
-    font-size: 1.5em;
+    font-size: 1.5vw;
     background-color: #53a8b6;
     color: black;
   }
@@ -57,7 +56,7 @@
   color: white;
   background-color: rgb(32, 41, 64);
   border-radius: 12px;
-  width: 60%;
+  width: 52vw;
   box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem,
     rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem,
     rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem;
@@ -66,19 +65,19 @@
     border: 0;
     outline: none;
     color: whitesmoke;
-    font-size: 2em;
+    font-size: 2vw;
   }
   .list {
     max-height: 38em;
     .todo {
       background: linear-gradient(to right, #aaffa9, #11ffbd);
       width: 98%;
-      height: 3em;
+      height: 5vh;
       color: black;
       border-radius: 10px;
-      font-size: 1.5em;
+      font-size: 1vw;
       button {
-        font-size: 1em;
+        font-size: 1vw;
       }
     }
   }
@@ -89,8 +88,12 @@
   }
 }
 
+.todoListHeader {
+  font-size: 2vw;
+}
+
 .todoContentLight {
-  width: 60%;
+  width: 52vw;
   background-color: white;
   box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
     rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
@@ -100,19 +103,19 @@
     border: 0;
     outline: none;
     color: black;
-    font-size: 2em;
+    font-size: 2vw;
   }
   .list {
     max-height: 38em;
     .todo {
       background: #366b76;
       width: 98%;
-      height: 3em;
+      height: 5vw;
       color: whitesmoke;
       border-radius: 10px;
-      font-size: 1.5em;
+      font-size: 1vw;
       button {
-        font-size: 1em;
+        font-size: 1vw;
         svg {
           fill: whitesmoke;
         }

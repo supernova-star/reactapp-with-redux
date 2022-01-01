@@ -22,39 +22,32 @@
     rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
 }
 .contentDark {
-  // background-color: rgb(52, 71, 103);
-  // box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
-  //   rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
-  // border-radius: 12px;
   width: 80%;
 }
 
 .contentLight {
-  // box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
-  //   rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
-  // border-radius: 12px;
-  // background-color: #fff;
   width: 80%;
 }
 .cartView {
-  right: 0em;
+  right: 0vw;
   .btn-cart {
-    height: 3em;
+    height: 5vh;
     background-color: #bbe4e9;
     border-radius: 0%;
   }
   .addtocartDark {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
-    width: 20em;
-    height: 50em;
+    width: 20vw;
+    z-index: 5;
     transition: width 0.5s;
   }
 
   .addtocartLight {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
-    width: 20em;
-    height: 50em;
+    width: 20vw;
+    z-index: 5;
     transition: width 0.5s;
   }
 

@@ -3,26 +3,27 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   border-radius: 10px;
-  width: 25em;
-  height: 20em;
+  width: 25vw;
+  padding: 2vh;
   color: #00204a;
 }
 
 .stopWatchDark {
   background-color: #80fcc9;
   border-radius: 10px;
-  width: 25em;
-  height: 20em;
+  width: 25vw;
+  padding: 2vh;
   color: #015804;
 }
 .stopWatchIcon {
   color: black;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.5vw;
+  height: 2.5vw;
 }
 .timer {
-  font-size: 4em;
+  font-size: 3vw;
   font-weight: 500;
+  padding: 2vw;
   .digits {
     width: 1.5em;
   }

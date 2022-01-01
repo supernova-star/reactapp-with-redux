@@ -1,12 +1,18 @@
 .listGroup {
-  height: 50em;
-  .overviewDark {
-    color: ghostwhite;
-    font-weight: 200;
+  height: 50vh;
+  padding: 1vw;
+  .appheader {
+    font-size: 1.5vw;
   }
-  .overviewLight {
+  .overViewDark {
+    color: ghostwhite;
+    font-weight: 400;
+    font-size: 1vw;
+  }
+  .overViewLight {
     color: black;
-    font-weight: 200;
+    font-weight: 400;
+    font-size: 1vw;
   }
   .listItemDark {
     outline: none;
@@ -25,7 +31,7 @@
     }
   }
   .listItemLight {
-    border-radius: 15px;
+    border-radius: 5px;
     svg {
       fill: black;
     }
@@ -33,6 +39,8 @@
       color: black;
       outline-color: transparent;
       outline: none;
+      font-size: 1vw;
+      font-weight: 400;
       &:focus {
         outline-color: transparent;
         outline: none;

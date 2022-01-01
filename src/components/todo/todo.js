@@ -70,25 +70,31 @@ const Todo = () => {
         theme ? "todoContainerDark" : "todoContainerLight"
       }`}
     >
-      <h3 className={`mb-3 py-3 px-3 ${theme ? "text-white" : "text-dark"}`}>
+      <p
+        className={`mb-3 py-3 px-3 todoListHeader ${
+          theme ? "text-white" : "text-dark"
+        }`}
+      >
         Task List!
-      </h3>
+      </p>
       <div className="d-flex flex-row mt-3">
-        <div
-          className={`me-3 p-3 col-sm-4 ${
-            theme ? "todoInputDark" : "todoInputLight"
-          }`}
-        >
-          <input
-            type="text"
-            value={inputValue}
-            onChange={handleInputChange}
-            class="inputstyles fs-4 form-control py-2 px-4"
-            placeholder="Enter new task"
-          />
-          <button onClick={handleAddTask} className="btn w-100 my-3">
-            Add Task
-          </button>
+        <div>
+          <div
+            className={`w-100 m-0 p-3 col-sm-4 ${
+              theme ? "todoInputDark" : "todoInputLight"
+            }`}
+          >
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              className="inputstyles form-control py-2 px-4"
+              placeholder="Enter new task"
+            />
+            <button onClick={handleAddTask} className="btn w-100 my-3">
+              Add Task
+            </button>
+          </div>
         </div>
 
         <div
@@ -100,7 +106,7 @@ const Todo = () => {
             type="text"
             value={searchValue}
             onChange={handleSearch}
-            class="searchBar fs-4 mb-2 form-control py-2 px-4"
+            class="searchBar mb-2 form-control py-2 px-4"
             placeholder={
               todoList.length === 0
                 ? "Please add tasks to search"
@@ -112,7 +118,7 @@ const Todo = () => {
             {list.map((item, index) => (
               <div
                 key={index}
-                className="todo p-3 d-flex flex-row justify-content-between align-items-center fs-6 my-2"
+                className="todo p-3 d-flex flex-row justify-content-between align-items-center my-2"
               >
                 <span>{item.title}</span>
                 <button

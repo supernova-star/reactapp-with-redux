@@ -1,39 +1,34 @@
 .buttonStyleDark {
-  width: 20em;
-  height: 20em;
+  width: 20vw;
   background: #81fcca;
   border-radius: 10px;
   .counterStyle {
     color: #045604;
-    font-size: 4em;
+    font-size: 4vw;
   }
   .buttonValue {
-    width: 3em;
-    height: 3em;
-    font-size: 2em;
-    padding-top: 0.2em;
-    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    font-size: 2vw;
+    padding-top: 0.2vw;
+    border-radius: 3vw;
     background: linear-gradient(to right, #11998e75, #38ef7d);
   }
 }
 .buttonStyleLight {
-  width: 20em;
-  height: 20em;
+  width: 20vw;
   background: #bbe4e9;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   .counterStyle {
     color: #00204a;
-    font-size: 4em;
+    font-size: 4vw;
   }
   .buttonValue {
-    width: 3em;
-    height: 3em;
-    font-size: 2em;
-    padding-top: 0.2em;
+    font-size: 2vw;
     border-style: hidden;
-    border-radius: 50%;
+    border-radius: 3vw;
     color: whitesmoke;
     background: #24527a;
   }

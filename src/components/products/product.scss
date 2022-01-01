@@ -1,23 +1,17 @@
 .productcontainerDark {
-  h3 {
+  p {
     background-color: rgb(32, 41, 64);
+    font-size: 2vw;
     box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem,
       rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem,
       rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem;
     border-radius: 12px;
   }
-  .btn-group {
-    background-color: #13504d;
-    border-radius: 1em;
-    .btn {
-      color: whitesmoke;
-    }
-  }
   .productContent {
-    max-height: 40em;
+    max-height: 73vh;
     .product {
       cursor: pointer;
-      width: 400px;
+      width: 24vw;
       background-color: #1e4254;
       box-shadow: 6px 10px 0px hsla(0, 0%, 0%, 0.14),
         0px 1px 18px 0px hsla(0, 0%, 0%, 0.12),
@@ -29,40 +23,41 @@
   }
 }
 .imageContainer {
-  width: 100px;
-  height: 90px;
+  width: 6vw;
+  height: 15vh;
 }
 .prodDetails {
-  height: 135px;
+  .priceSize {
+    font-size: 1vw;
+    line-height: 2vh;
+  }
 }
 
 .badge {
   background-color: #32b2a1;
 }
+.btngrp {
+  button {
+    font-size: 1vw;
+  }
+}
 
 .productcontainerLight {
-  // background-color: white;
-  h3 {
+  p {
     background-color: white;
+    font-size: 2vw;
     box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
       rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
     border-radius: 12px;
   }
-  .btn-group {
-    background-color: #64dcf07a;
-    border-radius: 1em;
-
-    .btn {
-      color: black;
-    }
-  }
   .productContent {
-    max-height: 40em;
+    max-height: 73vh;
     .product {
+      margin: 0.5vw 0.5vw 0.5vw 0.5vw;
       cursor: pointer;
       background-color: white;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      width: 400px;
+      width: 24vw;
       .badge {
         background-color: #5585b5;
       }

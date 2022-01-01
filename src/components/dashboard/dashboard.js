@@ -15,13 +15,13 @@ const Dashboard = () => {
 
   return (
     <div className="dashboardContainer rounded pt-0 pb-3 px-3">
-      <h3
+      <p
         className={`mb-3 py-3 px-3 text-capitalize  ${
           theme ? "text-white headerDark" : "text-dark headerLight"
         }`}
       >
         {`Welcome ${name}!`}
-      </h3>
+      </p>
       <div className="d-flex flex-row">
         <ClockWidget />
         <StopWatch />
