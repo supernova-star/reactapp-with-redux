@@ -83,9 +83,9 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
       </div> */}
       <hr />
       <div className="d-flex align-items-baseline justify-content-center">
-        <AiOutlineProject size="1vw" />
+        <AiOutlineProject size="1vw" className="align-self-center" />
         <p
-          className={`mb-0 mx-2 ${
+          className={`mb-0 mx-2 align-self-start ${
             switchValue ? "overViewDark" : "overViewLight"
           }`}
         >
@@ -93,6 +93,7 @@ const Navigation = ({ dashboardView, handleNavigation }) => {
         </p>
         <Switch
           isOn={switchValue}
+          customClass="align-self-center"
           onColor="rgb(40 170 87)"
           handleToggle={handleMode}
         />

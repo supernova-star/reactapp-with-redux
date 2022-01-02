@@ -24,6 +24,8 @@
       color: ghostwhite;
       outline-color: transparent;
       outline: none;
+      font-size: 1vw;
+      font-weight: 400;
       &:focus {
         outline-color: transparent;
         outline: none;
@@ -48,9 +50,9 @@
     }
   }
   .activeDark {
-    background-color: #0a66403d;
-    border: 2px solid #0a6640;
-    border-radius: 15px;
+    background: linear-gradient(195deg, #51a481, #236e47);
+    border-radius: 5px;
+    border: 0px;
   }
   .activeLight {
     span {
