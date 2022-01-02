@@ -116,8 +116,9 @@ const Products = ({ handleNavigation }) => {
                   <img
                     src={item.image}
                     alt={item.id}
-                    width="90vw"
-                    height="100vw"
+                    className="productImage"
+                    // width="90vw"
+                    // height="100vw"
                   />
                 </div>
 

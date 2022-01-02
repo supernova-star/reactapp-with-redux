@@ -68,7 +68,7 @@
     font-size: 2vw;
   }
   .list {
-    max-height: 38em;
+    max-height: 65vh;
     .todo {
       background: linear-gradient(to right, #aaffa9, #11ffbd);
       width: 98%;
@@ -106,11 +106,11 @@
     font-size: 2vw;
   }
   .list {
-    max-height: 38em;
+    max-height: 65vh;
     .todo {
       background: #366b76;
       width: 98%;
-      height: 5vw;
+      height: 5vh;
       color: whitesmoke;
       border-radius: 10px;
       font-size: 1vw;
