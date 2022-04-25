@@ -1,42 +1,31 @@
 .addtocartContainer {
   .cardheaderLight {
-    width: 15vw;
+    width: 8em;
     color: black;
-    font-size: 2.5vw;
   }
   .cardheaderDark {
-    width: 15vw;
-    font-size: 2.5vw;
+    width: 8em;
   }
   .products {
-    height: 75vh;
+    height: 40em;
     .cartproductDark {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      width: 19vw;
+      width: 19em;
       background-color: #13504d;
       color: whitesmoke;
-      .removeDark {
-        font-size: 0.8vw;
-      }
     }
     .cartproductLight {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      width: 19vw;
+      width: 19em;
       background-color: #3f7990;
       color: whitesmoke;
       .removeLight {
-        font-size: 0.8vw;
         background-color: #1c607a;
       }
     }
-    .title {
-      font-size: 1vw;
-    }
     .emptyCart {
-      width: 17vw;
-      font-size: 2vw;
-      padding: 0.5vw;
-      margin: auto;
+      width: 9.5em;
+      font-size: 2em;
       background-color: whitesmoke;
     }
   }
@@ -45,12 +34,13 @@
   }
 
   .totalPriceLight {
-    font-size: 2vw;
+    font-size: 2em;
     color: black;
-    width: 100%;
+    width: 8em;
   }
   .totalPriceDark {
-    font-size: 2vw;
-    width: 100%;
+    font-size: 2em;
+    width: 8em;
+    // color: whitesmoke;
   }
 }

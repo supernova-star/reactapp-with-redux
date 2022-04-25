@@ -22,7 +22,9 @@ const Products = ({ handleNavigation }) => {
   const dispatch = useDispatch();
   const mode = useSelector(GetTheme);
   const products = useSelector(GetAllProducts);
+  // const toastDetails = useSelector((state) => state.navigation.toastDetails);
   const { newproducts, productcategories, loading, cart } = products;
+  // const handleToast = useRef(null);
   useEffect(() => {
     if (newproducts.length === 0) {
       dispatch(fetchProducts());
@@ -69,13 +71,13 @@ const Products = ({ handleNavigation }) => {
 
   return (
     <div
-      className={`pt-0 pb-3 px-3 ${
+      className={`rounded p-3 ${
         mode ? "productcontainerDark" : "productcontainerLight"
       }`}
     >
-      <p className={`mb-3 py-3 px-3 ${mode ? "text-white" : "text-dark"}`}>
+      <h4 className={`mb-3 ${mode ? "text-white" : "text-dark"}`}>
         Products List
-      </p>
+      </h4>
       <div>
         <span>
           <strong>
@@ -84,11 +86,7 @@ const Products = ({ handleNavigation }) => {
             </h5>
           </strong>
         </span>
-        <ButtonGroup
-          className="btngrp"
-          variant="outlined"
-          aria-label=" outlined button group"
-        >
+        <ButtonGroup variant="outlined" aria-label=" outlined button group">
           <Button onClick={handleproductsByCategory} value="getAllProducts">
             Get All Products
           </Button>
@@ -98,6 +96,26 @@ const Products = ({ handleNavigation }) => {
             </Button>
           ))}
         </ButtonGroup>
+        {/* <div class="btn-group" role="group" aria-label="Basic example">
+          <button
+            type="button"
+            class="btn text-capitalize"
+            onClick={handleproductsByCategory}
+            value="getAllProducts"
+          >
+            Get All Products
+          </button>
+          {productcategories.map((category) => (
+            <button
+              type="button"
+              class="btn text-capitalize"
+              onClick={handleproductsByCategory}
+              c
+            >
+              {category}
+            </button>
+          ))}
+        </div> */}
       </div>
       {loading && (
         <div className="d-flex flex-row justify-content-center align-items-center py-5">
@@ -108,7 +126,7 @@ const Products = ({ handleNavigation }) => {
         <div className="d-flex flex-row flex-wrap overflow-auto mt-2 productContent">
           {newproducts.map((item) => (
             <div
-              className="product p-2 rounded "
+              className="product p-2 rounded my-2 mx-4"
               onClick={() => getProductDetails(item.id)}
             >
               <div className="d-flex flex-row">
@@ -116,32 +134,29 @@ const Products = ({ handleNavigation }) => {
                   <img
                     src={item.image}
                     alt={item.id}
-                    className="productImage"
-                    // width="90vw"
-                    // height="100vw"
+                    width="125"
+                    height="130"
                   />
                 </div>
 
-                <div className="d-flex flex-column py-2 ms-3 w-100 justify-content-between prodDetails">
+                <div className="d-flex flex-column py-2 ms-5 w-100 justify-content-between prodDetails">
                   <span>{item.title}</span>
                   <div className="d-flex flex-row justify-content-between">
-                    <span class="badge w-50 me-2 priceSize">
-                      {item.price} $
-                    </span>
+                    <span class="badge w-50 me-2 fs-6">{item.price} $</span>
                     {isInCart(item.id) && (
                       <span
-                        class="badge bg-danger"
+                        class="badge bg-danger fs-6"
                         onClick={(event) => handleRemove(event, item.id)}
                       >
-                        <MdDelete size="1vw" />
+                        <MdDelete />
                       </span>
                     )}
                     {!isInCart(item.id) && (
                       <span
-                        class="badge"
+                        class="badge fs-6"
                         onClick={(event) => handleAddToCart(event, item.id)}
                       >
-                        <FaShoppingCart size="1vw" />
+                        <FaShoppingCart />
                       </span>
                     )}
                   </div>

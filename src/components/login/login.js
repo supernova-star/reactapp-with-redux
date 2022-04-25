@@ -45,7 +45,7 @@ const Login = () => {
     if (currentUser.length !== 0) {
       navigate("./home");
       dispatch(SetUserInfo(currentUser[0]));
-      window.sessionStorage.setItem("user", JSON.stringify(currentUser[0]));
+      // window.sessionStorage.setItem("user", JSON.stringify(currentUser[0]));
     }
   };
   return (
@@ -58,23 +58,28 @@ const Login = () => {
       {!spinner && (
         <div className="d-flex flex-row justify-content-center align-items-center p-5 mt-5">
           <div className="loginContainer mt-5 d-flex flex-column">
-            <img src={workLogo} alt="logo" className="logoCustomClass" />
+            <img
+              src={workLogo}
+              alt="logo"
+              width="50"
+              height="50"
+              className="ms-3 mt-3"
+            />
             <div className="d-flex flex-row">
               <img
                 src={workImage}
                 alt="workImage"
-                className="workImageCustom"
+                width="450"
+                height="400"
+                className="mt-5"
               />
-              <div className="loginContent w-100 mt-0">
-                <h4 className="welcome">Welcome!</h4>
+              <div className="loginContent w-100 mt-0 mx-3">
+                <h4 className="display-6 welcome">Welcome!</h4>
                 <p>Please enter your username and email id to login.</p>
                 <form onSubmit={handleSubmit}>
-                  <div className="inputWrapper py-2 ">
+                  <div className="inputWrapper py-2 mt-5">
                     <div className="d-flex flex-row newloginInput pb-2">
-                      <FaUser
-                        size="1.5vw"
-                        className="emailIcon align-self-end"
-                      />
+                      <FaUser className="emailIcon ms-3 align-self-end mb-1" />
                       <TextField
                         required
                         id="standard-required"
@@ -82,14 +87,11 @@ const Login = () => {
                         value={userNameInput}
                         onChange={setUserName}
                         variant="standard"
-                        className="ms-3 w-100 pe-3 inputClass"
+                        className="ms-3 w-100 pe-3"
                       />
                     </div>
                     <div className=" d-flex flex-row newloginInput pb-2">
-                      <FaEnvelope
-                        size="1.5vw"
-                        className="emailIcon align-self-end"
-                      />
+                      <FaEnvelope className="emailIcon ms-3 align-self-end mb-1" />
                       <TextField
                         required
                         id="standard-required"
@@ -97,12 +99,12 @@ const Login = () => {
                         value={emailInput}
                         onChange={setEmail}
                         variant="standard"
-                        className="ms-3 w-100 pe-3 inputClass"
+                        className="ms-3 w-100 pe-3"
                         type="email"
                       />
                     </div>
                   </div>
-                  <div className="d-flex flex-row buttongrp">
+                  <div className="d-flex flex-row mt-5">
                     <Button
                       variant="contained"
                       size="large"
@@ -122,6 +124,9 @@ const Login = () => {
                 </form>
               </div>
             </div>
+
+            {/*
+             */}
           </div>
         </div>
       )}

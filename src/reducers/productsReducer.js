@@ -27,12 +27,12 @@ const productReducer = (state = DEFAULT_PRODUCTS_STATE, action) => {
     case SET_NEW_PRODUCTS:
       return {
         ...state,
-        newproducts: action.products,
+        newproducts: [...action.products],
       };
     case SET_PRODUCT_CATEGORIES:
       return {
         ...state,
-        productcategories: action.categories,
+        productcategories: [...action.categories],
       };
     case SET_PRODUCT_DETAIL:
       return {

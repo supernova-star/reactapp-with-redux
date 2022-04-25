@@ -3,29 +3,31 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #a9dfb5;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  width: 54vw;
+  width: 57em;
   border-radius: 10px;
+  .showTime {
+    // color: #035704;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 5em;
+  }
 }
 .clockContainerDark {
   background-image: url("../../assets/image/watch2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #81fcca;
-  width: 54vw;
+  width: 57em;
   border-radius: 10px;
-}
-.showTime {
-  color: whitesmoke;
-  font-weight: 500;
-  font-size: 5vw;
-}
-.showDate {
-  font-size: 2vw;
+  .showTime {
+    color: whitesmoke;
+    // color: #035704;
+    font-weight: 500;
+    font-size: 5em;
+  }
 }
 
 .clockIcon {
-  width: 2vw;
-  height: 2vw;
+  width: 2em;
+  height: 2em;
 }

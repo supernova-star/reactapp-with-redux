@@ -1,53 +1,37 @@
-.homeContainerLight {
-  background-color: #eceff1;
-  height: 100%;
-}
-.homeContainerDark {
-  background-color: rgb(26, 32, 53);
-  height: 100%;
-}
 .navigationDark {
-  background-color: rgb(31, 40, 62);
+  background-color: #081627;
   color: white;
-  border-radius: 12px;
-  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
-    rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
 }
 
 .navigationLight {
   background-color: #fff;
   color: black;
-  border-radius: 12px;
-  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
-    rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+  border-right: 1px solid #d4d4d4;
 }
 .contentDark {
-  width: 80%;
+  background-color: #081e35;
 }
 
 .contentLight {
-  width: 80%;
+  background-color: #fff;
 }
 .cartView {
-  right: 0vw;
+  right: 0em;
   .btn-cart {
-    height: 8vh;
+    height: 3em;
     background-color: #bbe4e9;
     border-radius: 0%;
   }
   .addtocartDark {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
-    width: 20vw;
-    z-index: 5;
+    width: 20em;
     transition: width 0.5s;
   }
 
   .addtocartLight {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
-    width: 20vw;
-    z-index: 5;
+    width: 20em;
     transition: width 0.5s;
   }
 
