@@ -3,7 +3,7 @@ export const DEFAULT_COUNT_STATE = {
 };
 
 export const DEFAULT_TODO_STATE = {
-  todoList: [],
+  todoList: ["Throw the trash", "Finish the homework", "Get Groceries"],
 };
 
 export const DEFAULT_PRODUCTS_STATE = {

@@ -6,7 +6,6 @@ import {
 } from "../../actions/counterAction";
 import { GetCountValue } from "../../selectors/counter";
 import { GetTheme } from "../../selectors/navigation";
-import { MdOutlineAdd, MdHorizontalRule } from "react-icons/md";
 import Button from "@material-ui/core/Button";
 import "./counter.scss";
 
@@ -22,7 +21,7 @@ const Counter = () => {
   };
   return (
     <div
-      className={`py-3 d-flex my-3 flex-column justify-content-between counterContainer ${
+      className={`p-4 d-flex my-3 flex-column justify-content-between counterContainer ${
         theme ? "buttonStyleDark" : "buttonStyleLight"
       }`}
     >
@@ -32,17 +31,17 @@ const Counter = () => {
           variant="contained"
           size="large"
           onClick={handleIncrement}
-          className="buttonValue d-inline-block mx-2 p-0"
+          className="buttonValue d-inline-block mx-2"
         >
-          <MdOutlineAdd />
+          +
         </Button>
         <Button
           variant="contained"
           size="large"
           onClick={handleDecrement}
-          className="buttonValue d-inline-block mx-2 p-0"
+          className="buttonValue d-inline-block mx-2"
         >
-          <MdHorizontalRule />
+          -
         </Button>
       </div>
     </div>

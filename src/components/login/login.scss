@@ -1,53 +1,31 @@
 .loginContainer {
-  width: 55vw;
-  height: 65vh;
+  width: 55em;
+  height: 35em;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
-  .logoCustomClass {
-    width: 3vw;
-    height: 5vh;
-    margin: 1vh 0vw 0vh 1vw;
-  }
-  .workImageCustom {
-    width: 50vw;
-    height: 50vh;
-  }
   .loginContent {
-    margin: 0vh 1vw 0vh 0vw;
     .welcome {
       color: hsl(236, 32%, 42%);
-      font-size: 2.5vw;
-      font-weight: 300;
-      + p {
-        font-size: 1vw;
-      }
     }
     .inputWrapper {
       background-color: whitesmoke;
       border-radius: 20px;
-      margin: 6vh 0vw 0vw 0vw;
       .newloginInput {
         .emailIcon {
-          margin: 0px 0px 0vw 1vw;
-        }
-        .inputClass input {
-          font-size: 1vw;
+          width: 1.5em;
+          height: 1.5em;
         }
       }
     }
-    .buttongrp {
-      margin: 5vh 0vw 0vh 0vw;
-      .loginButtons {
-        background-color: #342e94c7;
-        border: 0px;
-        font-size: 1vw;
-        &:focus,
-        &:active:focus,
-        & .active:focus {
-          outline: none;
-          box-shadow: none;
-        }
+    .loginButtons {
+      background-color: #342e94c7;
+      border: 0px;
+      &:focus,
+      &:active:focus,
+      & .active:focus {
+        outline: none;
+        box-shadow: none;
       }
     }
   }

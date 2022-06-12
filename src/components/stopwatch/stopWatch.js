@@ -9,7 +9,6 @@ import {
   MdOutlineRestartAlt,
 } from "react-icons/md";
 import { FaPlay } from "react-icons/fa";
-import { IconButton } from "@material-ui/core";
 
 const StopWatch = () => {
   const [isActive, setIsActive] = useState(false);
@@ -46,44 +45,24 @@ const StopWatch = () => {
   };
 
   const StartButton = (
-    <IconButton
-      color="primary"
-      aria-label="upload picture"
-      onClick={handleStart}
-      component="span"
-    >
-      <FaPlay size="3vw" color="#24527a" />
-    </IconButton>
+    <div className="btn " onClick={handleStart}>
+      <FaPlay />
+    </div>
   );
   const ActiveButtons = (
     <div>
-      <IconButton
-        color="primary"
-        aria-label="upload picture"
-        onClick={handleReset}
-        component="span"
-      >
-        <MdOutlineRestartAlt size="3vw" color="#24527a" />
-      </IconButton>
-      <IconButton
-        color="primary"
-        aria-label="upload picture"
-        onClick={handlePauseResume}
-        component="span"
-      >
-        {isPaused ? (
-          <MdNotStarted size="3vw" color="#24527a" />
-        ) : (
-          <MdPauseCircle size="3vw" color="#24527a" />
-        )}
-      </IconButton>
-      <div className="btn" onClick={handlePauseResume}></div>
+      <div className="btn" onClick={handleReset}>
+        <MdOutlineRestartAlt />
+      </div>
+      <div className="btn btn-one" onClick={handlePauseResume}>
+        {isPaused ? <MdNotStarted /> : <MdPauseCircle />}
+      </div>
     </div>
   );
   return (
-    <div className={`${theme ? "stopWatchDark" : "stopWatchLight"}`}>
+    <div className={`${theme ? "stopWatchDark" : "stopWatchLight"} p-4`}>
       <RiTimerFill className="stopWatchIcon" />
-      <div className="timer text-center">
+      <div className="timer text-center p-4">
         <span className="digits d-inline-block">
           {("0" + Math.floor((time / 60000) % 60)).slice(-2)}:
         </span>

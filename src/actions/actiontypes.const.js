@@ -1,6 +1,5 @@
 export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
-export const SET_COUNTER = "SET_COUNTER";
 export const GET_PRODUCTS = "GET_PRODUCTS";
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const FETCH_ALL_PRODUCTS = "FETCH_ALL_PRODUCTS";

@@ -1,8 +1,4 @@
-import {
-  INCREMENT,
-  DECREMENT,
-  SET_COUNTER,
-} from "../actions/actiontypes.const";
+import { INCREMENT, DECREMENT } from "../actions/actiontypes.const";
 import { DEFAULT_COUNT_STATE } from "../store/state";
 
 const counterReducer = (state = DEFAULT_COUNT_STATE, action) => {
@@ -16,11 +12,6 @@ const counterReducer = (state = DEFAULT_COUNT_STATE, action) => {
       return {
         ...state,
         count: state.count - 1,
-      };
-    case SET_COUNTER:
-      return {
-        ...state,
-        count: action.count,
       };
     default:
       return state;

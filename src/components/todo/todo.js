@@ -3,11 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./todo.scss";
 import { FaTrash } from "react-icons/fa";
 import { GetTodoList } from "../../selectors/todo";
-import {
-  AddNewTask,
-  FetchTodoList,
-  RemoveTask,
-} from "../../actions/todoAction";
+import { AddNewTask, RemoveTask } from "../../actions/todoAction";
 import { GetTheme } from "../../selectors/navigation";
 
 const Todo = () => {
@@ -18,12 +14,6 @@ const Todo = () => {
   const [searchValue, setSearchValue] = useState("");
   const [list, setList] = useState(todoList);
   const [noResultFound, setNoResultFound] = useState(false);
-
-  useEffect(() => {
-    if (todoList.length === 0) {
-      dispatch(FetchTodoList());
-    }
-  }, []);
   const handleInputChange = (e) => {
     setinputValue(e.target.value);
   };
@@ -33,11 +23,11 @@ const Todo = () => {
       setinputValue("");
     }
   };
-  const handleRemoveTask = (todoId) => {
-    const index = todoList.findIndex((item) => item.id === todoId);
+  const handleRemoveTask = (todo) => {
+    const index = todoList.findIndex((item) => item === todo);
     dispatch(RemoveTask(index));
     if (searchValue !== "") {
-      const newList = list.filter((item) => item.id !== todoId);
+      const newList = list.filter((item) => item !== todo);
       setList(newList);
       if (newList.length === 0) {
         setNoResultFound(true);
@@ -48,9 +38,7 @@ const Todo = () => {
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
     setSearchValue(searchTerm);
-    const newList = todoList.filter((item) =>
-      item.title.includes(e.target.value)
-    );
+    const newList = todoList.filter((item) => item.includes(e.target.value));
     setList(newList);
     if (newList.length === 0) {
       setNoResultFound(true);
@@ -65,40 +53,30 @@ const Todo = () => {
   }, [todoList, searchValue]);
 
   return (
-    <div
-      className={`rounded pt-0 pb-3 px-3 ${
-        theme ? "todoContainerDark" : "todoContainerLight"
-      }`}
-    >
-      <p
-        className={`mb-3 py-3 px-3 todoListHeader ${
-          theme ? "text-white" : "text-dark"
-        }`}
-      >
+    <div className="todoContainer rounded p-3">
+      <h3 className={`mb-3 p-2 ${theme ? "text-white" : "text-dark"}`}>
         Task List!
-      </p>
-      <div className="d-flex flex-row mt-3">
-        <div>
-          <div
-            className={`w-100 m-0 p-3 col-sm-4 ${
-              theme ? "todoInputDark" : "todoInputLight"
-            }`}
-          >
-            <input
-              type="text"
-              value={inputValue}
-              onChange={handleInputChange}
-              className="inputstyles form-control py-2 px-4"
-              placeholder="Enter new task"
-            />
-            <button onClick={handleAddTask} className="btn w-100 my-3">
-              Add Task
-            </button>
-          </div>
+      </h3>
+      <div className="d-flex flex-row">
+        <div
+          className={`mx-3 col-sm-4 ${
+            theme ? "todoInputDark" : "todoInputLight"
+          }`}
+        >
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            class="inputstyles form-control py-2 px-4"
+            placeholder="Enter new task"
+          />
+          <button onClick={handleAddTask} className="btn w-100 my-3">
+            Add Task
+          </button>
         </div>
 
         <div
-          className={`col-sm-8 ms-3 p-3 ${
+          className={`col-sm-8 ${
             theme ? "todoContentDark" : "todoContentLight"
           }`}
         >
@@ -106,7 +84,7 @@ const Todo = () => {
             type="text"
             value={searchValue}
             onChange={handleSearch}
-            class="searchBar mb-2 form-control py-2 px-4"
+            class="searchBar mx-2 mb-2 form-control py-2 px-4"
             placeholder={
               todoList.length === 0
                 ? "Please add tasks to search"
@@ -118,13 +96,10 @@ const Todo = () => {
             {list.map((item, index) => (
               <div
                 key={index}
-                className="todo p-3 d-flex flex-row justify-content-between align-items-center my-2"
+                className="todo p-3 d-flex flex-row justify-content-between align-items-center m-2"
               >
-                <span>{item.title}</span>
-                <button
-                  onClick={() => handleRemoveTask(item.id)}
-                  className="btn"
-                >
+                <span>{item}</span>
+                <button onClick={() => handleRemoveTask(item)} className="btn">
                   <FaTrash />
                 </button>
               </div>
